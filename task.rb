@@ -15,7 +15,9 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+array1.<<(array2)
+array1.flatten!
+p array1
 end
 
 def q3
