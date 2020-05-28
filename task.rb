@@ -108,8 +108,7 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  sports.flatten!
-  sports.uniq! 
+  sports.flatten!.uniq! 
   puts "ユーザーの趣味一覧表"
   sports.each.with_index(1) do |sport, i|  
    puts "No#{i} #{sport}"   
@@ -125,8 +124,11 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+  hash = Hash.new
+  puts data [:name]
 
-end
+end  
+
 
 def q13
   user_data = { name: "神里", age: 31, address: "埼玉" }
