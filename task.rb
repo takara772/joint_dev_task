@@ -120,12 +120,16 @@ end
   
 
 
+
 def q12
+
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-  hash = Hash.new
-  puts data [:name]
+  
+  puts data[:user][:name]
+  
+
 
 end  
 
