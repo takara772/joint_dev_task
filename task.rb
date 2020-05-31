@@ -114,24 +114,20 @@ def q11
    puts "No#{i} #{sport}"   
     
   end
-  
 end
 
+
+
+  def q12
+
+    data = { user: { name: "satou", age: 33 } }
   
-
-
-
-def q12
-
-  data = { user: { name: "satou", age: 33 } }
-
-  # 以下に回答を記載
+    # 以下に回答を記載
+    puts data.dig(:user, :name)
+    
   
-  puts data[:user][:name]
+  end  
   
-
-
-end  
 
 
 def q13
@@ -139,9 +135,11 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  user_data = user_data.merge!(update_data)
+    p user_data
+  p user_data.update(update_data)
 end
-
+ 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
@@ -169,72 +167,16 @@ def q16
 
 end
 
-class UserQ17
-  # 以下に回答を記載
-
-end
-
-def q17
-  # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
-  user1 = UserQ17.new(name: "神里", age: 32, gender: "男")
-  user2 = UserQ17.new(name: "あじー", age: 32, gender: "男")
-
-  user1.info
-  puts "-------------"
-  user2.info
-end
-
-class UserQ18
-  # 以下に回答を記載
-
-end
-
-def q18
-  # ここは変更しないで下さい
-  user1 = UserQ18.new(name: "あじー", age: 32)
-  user2 = UserQ18.new(name: "ゆたぼん", age: 10)
-
-  puts user1.introduce
-  puts user2.introduce
-end
-
-class Item
-  # 以下を修正して下さい
-
-  def initialize(name)
-    @name = name
-  end
-end
-
-def q19
-  # ここは変更しないで下さい
-  book = Item.new(name: "ゼロ秒思考")
-  puts book.name
-end
-
-class UserQ20
-  # 以下に回答を記載
-
-end
-
-class Zoo
-  # 以下に回答を記載
-
-end
 
 
-def q20
-  # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
-  zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
 
-  users = [
-    UserQ20.new(name: "たま", age: 3),
-    UserQ20.new(name: "ゆたぼん", age: 10),
-    UserQ20.new(name: "あじー", age: 32),
-    UserQ20.new(name: "ぎん", age: 108)
-  ]
 
-  users.each do |user|
-    zoo.info_entry_fee(user)
-  end
-end
+
+
+
+
+
+
+
+
+
